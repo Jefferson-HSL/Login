@@ -1,0 +1,104 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background-color: rgb(11, 75, 134);
+    display: grid;                            /* grade de exibição*/
+    place-items: center;                      /* colocar itens de forma central*/
+}
+
+p{
+    font-size: 1.3125rem;                     /* tamanho da fonte */
+    font-weight: 700;                         /* altura da fonte */
+    color: #222;
+    margin-bottom: 5rem;                      /* margem debaixo ou abaixo*/
+}
+
+form{
+    display: flex;                            /* tela flexível */
+    flex-direction: column;                   /* direção flexível */
+    align-items: center;                      /* alinhar itens */
+    width: 100%;
+    max-width: 28rem;                         /* largura maxima */
+    background: #fff;
+    padding: 3rem;
+    border-radius: 0.5rem;                    /* raio de fronteira */
+    box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);   /* sombra da caixa */
+}
+/* etiqueta */
+label{
+    width: 100%;
+    color: #777;
+    align-self: flex-start;                   /* alinhar-se de forma flexível ao incio */
+    transition: 0.15s linear;                 /* transição */
+}
+
+/* quando clicar para digitar algo a etiqueta vai mudar para essas definições */
+label:focus-within{                           /* tag label com foco dentro */
+    color: rgb(11, 75, 134);
+}
+
+/* interação com o usuário */
+input{
+    font-size: 1.1875rem;                    /* tamanho da fonte */
+    color: #404040;
+    padding: 1rem 0 0.5rem 0;
+    width: 100%;
+    border: none;
+    border-color: #a0a0a0;                 /* cor das bordas */
+    border-bottom-width: 1px;                /* largura das bordas do botão */
+    border-bottom-style: dotted;             /* estilo das bordas do botão de forma potilhado*/
+    margin-bottom: 3rem;                     /* margem do botão */
+    transition: 0.15s linear;                /* transição de forma linear*/
+}
+
+/* quando for digitado a interação */
+input:focus{
+    outline: none;                           /* contorno de forma nula */
+    border-color: rgb(11, 75, 134);        /* cor das bordas */
+}
+
+a{
+    text-decoration: none;                   /* decoração do texto de forma nula */
+}
+
+/* muda a cor das tag A quando chega  com o mouse perto*/
+a:hover, a:focus{                            /* tag A fique flutuando e com foco */
+    outline: none;
+    color: #000;
+}
+
+/* dar espaçamento acima das tag A */
+a:first-of-type{                             /* tag A fique primeiro do tipo */
+    margin-top: 3rem;                        /* margem do topo */
+}
+
+/* dar espaçamento entre as tag A */
+a + a{
+    margin-top: 1.125rem;
+}
+
+/* botão */
+button{
+    font-size: 0.8125rem;
+    line-height: 2rem;                        /* altura da linha */
+    font-weight: 700;                         /* peso da fonte */
+    text-transform: uppercase;                /* transformação do texto de forma de letras maiusculas */
+    width: 100%;
+    padding: 1rem 2rem;
+    cursor: pointer;                          /* cursor de forma apontar*/
+    background: transparent;
+    color: rgb(11, 75, 134);
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: 0.5s;    
+}
+
+/* faz com que apareça uma cor quando o mursor(mouse) chegar perto */
+button:hover, button:focus{
+    outline: none;
+    background: rgb(11, 75, 134);
+    color: #fff;
+}
